@@ -731,7 +731,7 @@ const controls = {
     tipElement.innerText = controls.formatTime(time);
 
     // Get marker point for time
-    const point = this.config.markers?.points?.find(({ time: t }) => t === Math.round(time));
+    const point = this.config.markers?.points?.find(({ time: t }) => t === time.toFixed(2));
 
     // Append the point label to the tooltip
     if (point) {
